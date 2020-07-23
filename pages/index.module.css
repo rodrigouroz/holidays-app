@@ -1,0 +1,62 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 0 1em 0 1em;
+}
+
+.holidaysWorldwide {
+    padding: 0 1em 0 1em;
+}
+
+.results {
+    padding: 0 1em 0 1em;
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    padding: 0 1em 0 1em;
+}
+
+.question input[type="text"] {
+    border-radius: 1em;
+    width: 60vw;
+    height: calc(1.5em + .75rem + 2px);
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+.question input[type="text"]:focus {
+    outline: none
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 0.5fr 0.25fr 3fr 0.5fr;
+    grid-row-gap: 10px;
+    min-height: 100%;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+}
+
+.footer a {
+    color: white;
+}
