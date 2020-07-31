@@ -5,7 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,jsx}\"",
+    "lint": "eslint . --ext js --ext jsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.@(js|jsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "country-locale-map": "^1.4.8",
@@ -15,5 +28,13 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "swr": "^0.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.5",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
   }
 }
