@@ -38,9 +38,9 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 0.5fr 0.25fr 3fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.25fr 3fr 0.5fr;
     grid-row-gap: 10px;
-    min-height: 100%;
+    max-height: 100%;
 }
 
 .footer {
