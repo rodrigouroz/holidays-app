@@ -1,4 +1,5 @@
 {
+  "plugins": ["jest"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -25,6 +26,16 @@
       {
         "allow": ["warn", "error"]
       }
-    ]
+    ],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

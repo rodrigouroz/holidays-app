@@ -31,11 +31,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 
-- Implement more question types
-- Implement a way for an user to send a report if a question was not properly
-- Show examples of questions
-- Add more design (footer is not visible)
 - Add Unit tests
-- Add Linting
+- Implement more question types
+- Show examples of questions (https://typeitjs.com/ ?)
+- Implement a way for an user to rate an answer (thumbs up or thumbs down)
+  - Thumbs up should train and validate the response in wit.ai
+  - Thumbs down could go to a google spreadsheet for manual analysis
+- Add more design (footer is not visible, holidays in the world section occupies a lot of space)
 - Convert to TypeScript ?
+- React testing library
 - Externalize strings to constant

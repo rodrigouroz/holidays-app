@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx}\"",
-    "lint": "eslint . --ext js --ext jsx"
+    "lint": "eslint . --ext js --ext jsx",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -30,10 +31,13 @@
     "swr": "^0.2.3"
   },
   "devDependencies": {
+    "babel-jest": "^26.2.2",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-react": "^7.20.5",
     "husky": "^4.2.5",
+    "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   }
