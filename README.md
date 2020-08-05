@@ -31,7 +31,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO
 
-- Add Unit tests
 - Implement more question types
 - Show examples of questions (https://typeitjs.com/ ?)
 - Implement a way for an user to rate an answer (thumbs up or thumbs down)

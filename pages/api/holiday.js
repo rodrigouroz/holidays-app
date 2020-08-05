@@ -5,7 +5,7 @@ import questionResolver from '../../lib/questions';
 
 const client = new Wit({
   accessToken: process.env.WIT_TOKEN,
-  logger: new log.Logger(log.DEBUG), // optional
+  logger: new log.Logger(log.INFO), // optional
 });
 
 export default async (req, res) => {
