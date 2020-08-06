@@ -21,6 +21,9 @@ const displayError = (error) => {
     case 'missing_country':
       errorMessage = 'The country was not specified';
       break;
+    case 'unknown_country':
+      errorMessage = 'The country was not recognized';
+      break;
   }
 
   return errorMessage;

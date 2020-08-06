@@ -14,7 +14,7 @@ export default function HolidaysInTheWorld({ holidaysWorldwide }) {
 
   return (
     <React.Fragment>
-      <h1>Holidays in the world</h1>
+      <h1 className={styles.title}>Holidays in the world</h1>
       <div className={styles.container}>
         <div>
           <h2>{moment(data[0].date).format('dddd, MMMM Do')}</h2>
