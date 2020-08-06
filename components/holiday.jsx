@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 const displayWithCountry = (country, name) => (
-  <h3>
+  <p>
     {country.emoji} {country.name}: {name}
-  </h3>
+  </p>
 );
 
 const displayWithDate = (date, name) => (
-  <h3>
+  <p>
     {name} on {moment(date).format('dddd, MMMM Do')} ({moment(date).fromNow()})
-  </h3>
+  </p>
 );
 
 export default function Holiday(props) {

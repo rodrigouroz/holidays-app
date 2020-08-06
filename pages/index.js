@@ -18,6 +18,7 @@ export async function getStaticProps() {
 
 export default function Home({ holidaysWorldwide }) {
   const [q, setQ] = useState('');
+  const [searching, setSearching] = useState(false);
   const debouncedSearch = useDebounce(q, 1000);
 
   return (
@@ -41,9 +42,23 @@ export default function Home({ holidaysWorldwide }) {
             value={q}
             onChange={(e) => setQ(e.target.value)}
           ></input>
+          <div
+            style={{ display: searching ? 'inline-block' : 'none' }}
+            className={styles.loader}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
         <div className={styles.results}>
-          {debouncedSearch && <Holidays search={debouncedSearch} />}
+          {debouncedSearch && (
+            <Holidays
+              search={debouncedSearch}
+              onSearchingChange={setSearching}
+            />
+          )}
         </div>
         <div className={styles.footer}>
           <div>
