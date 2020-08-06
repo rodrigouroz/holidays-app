@@ -62,6 +62,7 @@
 }
 
 .loader {
+  display: inline-block;
   position: relative;
   left: -60px;
   width: 45px;

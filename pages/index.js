@@ -43,7 +43,7 @@ export default function Home({ holidaysWorldwide }) {
             onChange={(e) => setQ(e.target.value)}
           ></input>
           <div
-            style={{ display: searching ? 'inline-block' : 'none' }}
+            style={{ visibility: searching ? 'visible' : 'hidden' }}
             className={styles.loader}
           >
             <div></div>
