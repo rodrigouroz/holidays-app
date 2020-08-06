@@ -33,7 +33,7 @@ export default function Home({ holidaysWorldwide }) {
           <HolidaysInTheWorld holidaysWorldwide={holidaysWorldwide} />
         </div>
         <div className={styles.title}>
-          <h1>Ask what you want to know about a holiday</h1>
+          <h1>Ask what you want to know about upcoming holidays</h1>
         </div>
         <div className={styles.question}>
           <input
