@@ -29,6 +29,9 @@ const displayError = (error) => {
     case 'unknown_country':
       errorMessage = 'The country was not recognized';
       break;
+    case 'unknown_question':
+      errorMessage = 'This questions is not supported or understood';
+      break;
   }
 
   return errorMessage;
