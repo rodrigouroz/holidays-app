@@ -1,6 +1,6 @@
 import useSwr from 'swr';
 import fetchAPI from '../utils/apiClient';
-import Holiday from './holiday';
+import HolidayInTheWorld from './holidayInTheWorld';
 import styles from './holidaysInTheWorld.module.css';
 import moment from 'moment';
 import React from 'react';
@@ -19,13 +19,13 @@ export default function HolidaysInTheWorld({ holidaysWorldwide }) {
         <div>
           <h2>{moment(data[0].date).format('dddd, MMMM Do')}</h2>
           {data[0].holidays.map((element, index) => (
-            <Holiday key={index} {...element} />
+            <HolidayInTheWorld key={index} {...element} />
           ))}
         </div>
         <div>
           <h2>{moment(data[1].date).format('dddd, MMMM Do')}</h2>
           {data[1].holidays.map((element, index) => (
-            <Holiday key={index} {...element} />
+            <HolidayInTheWorld key={index} {...element} />
           ))}
         </div>
       </div>
