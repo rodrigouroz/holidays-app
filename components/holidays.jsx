@@ -4,11 +4,16 @@ import Holiday from './holiday';
 import React, { useEffect } from 'react';
 
 const displayResults = (answer_title, holidays) => {
+  const countries = new Set();
+  for (let holiday of holidays) {
+    countries.add(holiday.country.name);
+  }
+  const showCountry = countries.size > 1;
   return (
     <div>
       <h2>{answer_title}</h2>
       {holidays.map((element, index) => (
-        <Holiday key={index} {...element} />
+        <Holiday showCountry={showCountry} key={index} {...element} />
       ))}
     </div>
   );
