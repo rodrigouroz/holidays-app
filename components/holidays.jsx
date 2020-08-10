@@ -30,7 +30,8 @@ const displayError = (error) => {
       errorMessage = 'The country was not recognized';
       break;
     case 'unknown_question':
-      errorMessage = 'This questions is not supported or understood';
+      errorMessage =
+        'This questions is not supported or understood. Try asking full questions';
       break;
   }
 
