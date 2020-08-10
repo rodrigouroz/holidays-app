@@ -30,7 +30,12 @@ const displayError = (error) => {
       errorMessage = 'The country was not recognized';
       break;
     case 'unknown_question':
-      errorMessage = 'This questions is not supported or understood';
+      errorMessage =
+        'This questions is not supported or understood. Try asking full questions. Our fault, not yours. We will improve';
+      break;
+    case 'search_term_not_recognized':
+      errorMessage =
+        'A request for a search was detected but the search term was not understood. Our fault, not yours. We will improve';
       break;
   }
 
