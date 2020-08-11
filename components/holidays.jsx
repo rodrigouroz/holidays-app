@@ -31,7 +31,7 @@ const displayError = (error) => {
       break;
     case 'unknown_question':
       errorMessage =
-        'This questions is not supported or understood. Try asking full questions. Our fault, not yours. We will improve';
+        'This questions is not supported or understood. Try asking full questions';
       break;
     case 'search_term_not_recognized':
       errorMessage =
