@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import useDebounce from '../lib/useDebounce';
 import Holidays from '../components/holidays';
 import HolidaysInTheWorld from '../components/holidaysInTheWorld';
@@ -17,9 +18,22 @@ export async function getStaticProps() {
 }
 
 export default function Home({ holidaysWorldwide }) {
+  const router = useRouter();
   const [q, setQ] = useState('');
   const [searching, setSearching] = useState(false);
-  const debouncedSearch = useDebounce(q, 1000);
+  const searchTerm = useDebounce(q, 1000);
+
+  useEffect(() => {
+    if (router.query && router.query.q) {
+      setQ(router.query.q);
+    }
+  }, [router.query]);
+
+  useEffect(() => {
+    if (searchTerm) {
+      router.push(`/?q=${searchTerm}`, undefined, { shallow: true });
+    }
+  }, [searchTerm]);
 
   return (
     <div className={styles.main}>
@@ -53,11 +67,8 @@ export default function Home({ holidaysWorldwide }) {
           </div>
         </div>
         <div className={styles.results}>
-          {debouncedSearch && (
-            <Holidays
-              search={debouncedSearch}
-              onSearchingChange={setSearching}
-            />
+          {searchTerm && (
+            <Holidays search={searchTerm} onSearchingChange={setSearching} />
           )}
         </div>
         <div className={styles.footer}>
