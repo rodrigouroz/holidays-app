@@ -31,7 +31,9 @@ export default function Home({ holidaysWorldwide }) {
 
   useEffect(() => {
     if (searchTerm) {
-      router.push(`/?q=${searchTerm}`, undefined, { shallow: true });
+      router.push(`/?q=${encodeURIComponent(searchTerm)}`, undefined, {
+        shallow: true,
+      });
     }
   }, [searchTerm]);
 
