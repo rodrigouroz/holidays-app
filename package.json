@@ -29,7 +29,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "string-similarity": "^4.0.2",
-    "swr": "^0.2.3"
+    "swr": "^0.2.3",
+    "typewriter-effect": "^2.13.1"
   },
   "devDependencies": {
     "babel-jest": "^26.2.2",

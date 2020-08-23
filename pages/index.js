@@ -6,6 +6,7 @@ import Holidays from '../components/holidays';
 import HolidaysInTheWorld from '../components/holidaysInTheWorld';
 import { getHolidaysWorldwide } from '../lib/holidays';
 import styles from './index.module.css';
+import Examples from '../components/examples';
 
 export async function getStaticProps() {
   const holidaysWorldwide = await getHolidaysWorldwide();
@@ -54,7 +55,6 @@ export default function Home({ holidaysWorldwide }) {
         <div className={styles.question}>
           <input
             type="text"
-            placeholder="e.g. What is the next holiday in Argentina?"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           ></input>
@@ -68,6 +68,7 @@ export default function Home({ holidaysWorldwide }) {
             <div></div>
           </div>
         </div>
+        <div className={styles.examples}>{!q && <Examples />}</div>
         <div className={styles.results}>
           {searchTerm && (
             <Holidays search={searchTerm} onSearchingChange={setSearching} />
