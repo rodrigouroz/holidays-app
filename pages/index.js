@@ -7,6 +7,7 @@ import HolidaysInTheWorld from '../components/holidaysInTheWorld';
 import { getHolidaysWorldwide } from '../lib/holidays';
 import styles from './index.module.css';
 import Examples from '../components/examples';
+import * as gtag from '../lib/gtag';
 
 export async function getStaticProps() {
   const holidaysWorldwide = await getHolidaysWorldwide();
@@ -35,6 +36,7 @@ export default function Home({ holidaysWorldwide }) {
       router.push(`/?q=${encodeURIComponent(searchTerm)}`, undefined, {
         shallow: true,
       });
+      gtag.search(searchTerm);
     }
   }, [searchTerm]);
 
