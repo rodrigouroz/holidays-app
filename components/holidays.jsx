@@ -2,6 +2,7 @@ import useSwr from 'swr';
 import fetchAPI from '../utils/apiClient';
 import Holiday from './holiday';
 import React, { useEffect } from 'react';
+import styles from './holidays.module.css';
 
 const displayResults = (answer_title, holidays) => {
   const countries = new Set();
@@ -11,10 +12,12 @@ const displayResults = (answer_title, holidays) => {
   const showCountry = countries.size > 1;
   return (
     <div>
-      <h2>{answer_title}</h2>
-      {holidays.map((element, index) => (
-        <Holiday showCountry={showCountry} key={index} {...element} />
-      ))}
+      <h1 className={styles.title}>{answer_title}</h1>
+      <div className={styles.container}>
+        {holidays.map((element, index) => (
+          <Holiday showCountry={showCountry} key={index} {...element} />
+        ))}
+      </div>
     </div>
   );
 };

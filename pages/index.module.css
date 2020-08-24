@@ -6,7 +6,7 @@
 .title {
   display: flex;
   justify-content: center;
-  padding: 0 1em 0 1em;
+  padding: 10vh 1em 0 1em;
 }
 
 .holidaysWorldwide {
@@ -45,9 +45,9 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.5fr 0.25fr 0.25fr 3fr 0.5fr;
+  grid-template-rows: 1fr 0.25fr 0.25fr 2fr 0.5fr;
   grid-row-gap: 10px;
-  max-height: 100%;
+  height: 100%;
 }
 
 .footer {

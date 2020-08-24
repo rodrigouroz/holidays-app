@@ -48,9 +48,6 @@ export default function Home({ holidaysWorldwide }) {
       </Head>
 
       <div className={styles.container}>
-        <div className={styles.holidaysWorldwide}>
-          <HolidaysInTheWorld holidaysWorldwide={holidaysWorldwide} />
-        </div>
         <div className={styles.title}>
           <h1>Ask what you want to know about upcoming holidays</h1>
         </div>
@@ -70,10 +67,18 @@ export default function Home({ holidaysWorldwide }) {
             <div></div>
           </div>
         </div>
-        <div className={styles.examples}>{!q && <Examples />}</div>
+        <div
+          style={{ visibility: !q ? 'visible' : 'hidden' }}
+          className={styles.examples}
+        >
+          <Examples />
+        </div>
         <div className={styles.results}>
           {searchTerm && (
             <Holidays search={searchTerm} onSearchingChange={setSearching} />
+          )}
+          {!searchTerm && (
+            <HolidaysInTheWorld holidaysWorldwide={holidaysWorldwide} />
           )}
         </div>
         <div className={styles.footer}>
