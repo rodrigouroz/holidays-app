@@ -54,7 +54,6 @@ export default function Home({ holidaysWorldwide }) {
         <div className={styles.question}>
           <input
             type="text"
-            label="Search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           ></input>
