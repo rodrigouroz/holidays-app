@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  justify-items: center;
+  font-size: x-large;
+}
+
+.title {
+  text-align: center;
+}
