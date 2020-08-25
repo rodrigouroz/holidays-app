@@ -90,7 +90,7 @@ export default function Home({ holidaysWorldwide }) {
               </a>
             </p>
             <a href="https://github.com/rodrigouroz/holidays-app">
-              <img src="/GitHub-Mark-Light-32px.png" />
+              <img alt="Github logo" src="/GitHub-Mark-Light-32px.png" />
             </a>
           </div>
         </div>
