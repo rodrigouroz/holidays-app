@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "country-locale-map": "^1.4.8",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "next": "^9.5.4",
     "node-wit": "^6.0.0",
     "react": "16.13.1",
